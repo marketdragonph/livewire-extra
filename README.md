@@ -12,9 +12,9 @@ This add package components in the livewire cache to avoid page expired message 
 
 ### Customise the configuration
 
-`php artisan vendor:publish --provider=MarketDragon\LivewireExtra\LivewireExtraServiceProvider`
+`php artisan vendor:publish --provider="MarketDragon\LivewireExtra\LivewireExtraServiceProvider"`
 
-`
+```
 <?php
 
 return [
@@ -23,4 +23,4 @@ return [
     // Your package folder location
     'vendor_dir' => './vendor/marketdragon/',
 ];
-`
+```
