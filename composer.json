@@ -1,6 +1,7 @@
 {
     "name": "marketdragon/livewire-extra",
-    "description": "Route based livewire component for package development",
+    "description": "Route based livewire component fix for package development",
+    "license": "MIT",
     "type": "library",
     "require": {
         "php": "^7.3|^8.0.2",

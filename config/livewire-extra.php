@@ -1,6 +1,8 @@
 <?php
 
 return [
-  'package_parent_name' => 'MarketDragon',
-  'vendor_dir' => './vendor/marketdragon/',
+    // Your core package name
+    'package_parent_name' => 'MarketDragon',
+    // Your package folder location
+    'vendor_dir' => './vendor/marketdragon/',
 ];
