@@ -1,0 +1,27 @@
+{
+    "name": "marketdragon/livewire-extra",
+    "description": "Route based livewire component for package development",
+    "type": "library",
+    "require": {
+        "livewire/livewire": "^2.10",
+        "illuminate/filesystem": "^9.12"
+    },
+    "autoload": {
+        "psr-4": {
+            "Marketdragon\\LivewireExtra\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "jo",
+            "email": "jdltechworks@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MarketDragon\\LivewireExtra\\LivewireExtraServiceProvider"
+            ]
+        }
+    }
+}
