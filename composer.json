@@ -3,12 +3,14 @@
     "description": "Route based livewire component for package development",
     "type": "library",
     "require": {
-        "livewire/livewire": "^2.10",
-        "illuminate/filesystem": "^9.12"
+        "php": "^7.3|^8.0.2",
+        "illuminate/support": "^9.0",
+        "illuminate/filesystem": "^9.12",
+        "livewire/livewire": "^2.10"
     },
     "autoload": {
         "psr-4": {
-            "Marketdragon\\LivewireExtra\\": "src/"
+            "MarketDragon\\LivewireExtra\\": "src/"
         }
     },
     "authors": [

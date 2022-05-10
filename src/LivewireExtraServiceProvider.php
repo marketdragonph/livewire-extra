@@ -31,7 +31,7 @@ class LivewireExtraServiceProvider extends ServiceProvider
                 DiscoverLivewire::class
             ]);
         }
-        
+
         $this->mergeConfigFrom(
             __DIR__ . '/../config/livewire-extra.php', 'livewire-extra'
         );
@@ -39,7 +39,7 @@ class LivewireExtraServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/../config/livewire-extra.php' => config_path('livewire-extra.php'),
         ]);
-        
+
         $this->registerComponentAutoDiscovery();
 
     }
@@ -59,7 +59,7 @@ class LivewireExtraServiceProvider extends ServiceProvider
             $namespaces = config('md-admin.namespaces');
             $packages = (new Filesystem)
                 ->directories(config('livewire-extra.vendor_dir'));
-            
+
             $livewireDefault = ComponentParser::generatePathFromNameSpace(config('livewire.class_namespace'));
 
             $livewirePackages = array_map(function($package) {
