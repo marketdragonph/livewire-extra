@@ -36,7 +36,7 @@ Add this to your preferred service provider
      */
     public function boot()
     {
-        $this->loadRoutesFrom(__DIR__. '/../routes/web.php');
+        $this->loadViewsFrom(__DIR__. '/../resources/views', 'md');
     }
 
 ```
