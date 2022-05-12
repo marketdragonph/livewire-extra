@@ -48,6 +48,7 @@ class LivewireComponentsFinder
             ->mapWithKeys(function ($class) {
                 return [$class::getName() => $class];
             })->toArray();
+        dd($this->manifest);
 
         $this->write($this->manifest);
 
@@ -85,18 +86,11 @@ class LivewireComponentsFinder
                         ->replace(['/', '.php'], ['\\', ''])
                         ->__toString();
                 }
-
                 $filename = str_replace('.php', '', $file->getFilename());
                 $packageParentName = str_replace(' ', '', config('livewire-extra.package_parent_name')) . '\\';
-
-                return $packageParentName . $filename . str($file->getPathname())
-                    ->replace([
-                        config('livewire-extra.package_parent_name'),
-                        config('livewire-extra.vendor_dir') . strtolower($filename) . '/src'
-                        ,'/',
-                        '.php'
-                    ], [ '', '', '\\', '' ])
-                    ->__toString();
+                $folder = str_replace('/src/Http/Livewire', '', $file->getPath());
+                $foldername = ucfirst(str_replace(config('livewire-extra.vendor_dir'), '', $folder));
+                return $packageParentName . $foldername . '\\Http\\Livewire\\'. $filename;
 
             })->filter(function (string $class) {
                 return is_subclass_of($class, Component::class) &&
