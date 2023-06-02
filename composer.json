@@ -5,9 +5,9 @@
     "type": "library",
     "require": {
         "php": "^7.3|^8.0.2",
-        "illuminate/support": "^9.0",
-        "illuminate/filesystem": "^9.12",
-        "livewire/livewire": "^2.10"
+        "illuminate/support": "^9.0|^10.0.0",
+        "illuminate/filesystem": "^9.12|^10.0.0",
+        "livewire/livewire": "^2.11"
     },
     "autoload": {
         "psr-4": {
